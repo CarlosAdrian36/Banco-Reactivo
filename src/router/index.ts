@@ -1,7 +1,4 @@
 import BancoReactivosLayout from '@/modules/bancoreactivos/layouts/BancoReactivosLayout.vue';
-import BancosPages from '@/modules/bancoreactivos/pages/BancosPages.vue';
-import CompartidosPages from '@/modules/bancoreactivos/pages/CompartidosPages.vue';
-import EliminadosPage from '@/modules/bancoreactivos/pages/EliminadosPage.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -11,21 +8,28 @@ const router = createRouter({
       path: '/',
       name: 'bancoReactivos',
       component: BancoReactivosLayout,
-    },
-    {
-      path: '/bancos',
-      name: 'banco',
-      component: BancosPages,
-    },
-    {
-      path: '/compartidos',
-      name: 'compartidos',
-      component: CompartidosPages,
-    },
-    {
-      path: '/eliminados',
-      name: 'eliminados',
-      component: EliminadosPage,
+      children: [
+        {
+          path: '/banco',
+          name: 'banco',
+          component: () => import('@/modules/bancoreactivos/view/HomeBanco.vue'),
+        },
+        // {
+        //   path: '/banco',
+        //   name: 'banco',
+        //   component: () => import('@/modules/bancoreactivos/pages/CompartidosPages.vue'),
+        // },
+        {
+          path: '/compartidos',
+          name: 'compartidos',
+          component: () => import('@/modules/bancoreactivos/pages/CompartidosPages.vue'),
+        },
+        {
+          path: '/eliminados',
+          name: 'eliminados',
+          component: () => import('@/modules/bancoreactivos/pages/EliminadosPage.vue'),
+        },
+      ],
     },
   ],
 });

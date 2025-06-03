@@ -1,7 +1,5 @@
 <template>
-  <div>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero in quisquam ipsum
-    earum. Nostrum fuga perferendis enim suscipit dolorem veniam reiciendis odit eveniet omnis
-    dicta, dolorum, minima harum vitae?
+  <div class="pt-32 bg-white">
+    <h1 class="text-center text-2xl font-bold text-gray-800">Bancos Compartidos</h1>
   </div>
 </template>
