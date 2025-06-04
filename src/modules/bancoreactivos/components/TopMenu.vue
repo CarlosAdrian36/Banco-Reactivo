@@ -1,6 +1,6 @@
 <template>
   <nav class="fixed top-0 left-0 z-20 w-full border-b border-gray-200 bg-white py-2.5 px-6 sm:px-4">
-    <div class="container mx-auto flex max-w-6xl flex-wrap items-center justify-between">
+    <div class="container mx-auto flex max-w-6xl flex-wrap items-center justify-evenly">
       <!-- Logo -->
       <a href="#" class="flex items-center gap-2">
         <svg
@@ -34,7 +34,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          {{ route.path === '/compartidos' ? 'Compartir Banco' : 'Crear Banco' }}
+          <!-- {{ route.path === '/compartidos' ? 'Compartir Banco' : 'Crear Banco' }} -->
         </button>
 
         <!-- Menú con avatar -->
@@ -82,7 +82,7 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+// import { useRoute } from 'vue-router';
 
-const route = useRoute();
+// const route = useRoute();
 </script>
